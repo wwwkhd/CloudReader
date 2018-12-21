@@ -29,22 +29,22 @@ android {
 
     // 注释下面代码(签名配置)
     signingConfigs {
-        if (propertyHaveSigningConfigs) {
-            debug {
-                storeFile file(pStoreFile)
-                storePassword pStorePassword
-                keyAlias pKeyAlias
-                keyPassword pKeyPassword
-            }
 
-            release {
-                storeFile file(pStoreFile)
-                storePassword pStorePassword
-                keyAlias pKeyAlias
-                keyPassword pKeyPassword
-            }
+        release {
+            keyAlias 'yunyue'
+            keyPassword '000000'
+            storeFile file('yunyue.keystore')
+            storePassword '000000'
+        }
+        debug {
+            keyAlias 'yunyue'
+            keyPassword '000000'
+            storeFile file('znv.keystore')
+            storePassword '000000'
         }
     }
+
+
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
